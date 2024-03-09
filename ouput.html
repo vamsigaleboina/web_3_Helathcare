@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retrieve Data</title>
+</head>
+<body>
+    <h1>Blockchain Data</h1>
+    <button id="loadData">Load Data</button>
+    <div id="data"></div>
+
+    <script>
+        document.getElementById('loadData').addEventListener('click', function() {
+            fetch('http://localhost:4000/blocks')
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Network response was not ok.');
+                })
+                .then(data => {
+                    console.log(data);
+                    displayData(data);
+                })
+                .catch(error => console.error('There has been a problem with your fetch operation:', error));
+        });
+
+        function displayData(data) {
+            const dataDiv = document.getElementById('data');
+            dataDiv.innerHTML = ''; // Clear previous data
+            data.forEach(block => {
+                const blockElement = document.createElement('p');
+                blockElement.textContent = JSON.stringify(block, null, 2);
+                dataDiv.appendChild(blockElement);
+            });
+        }
+    </script>
+</body>
+</html>
