@@ -30,3 +30,6 @@ a section to show all appointments and other necessary details on the hospital s
 to provide insights into trends in a patient’s health and records, therefore aiding them in
 decision-making.
 
+https://drive.google.com/file/d/1IdlXTlK96xzpYIRMnv_NwVlq1VJSJqL3/view?usp=sharing
+
+https://drive.google.com/file/d/1IdlXTlK96xzpYIRMnv_NwVlq1VJSJqL3/view?usp=sharing
